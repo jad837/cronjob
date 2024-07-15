@@ -4,8 +4,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ExampleService {
-    public int cronfunction() {
+    public void cronfunction() {
         System.out.println("Running cronjob");
-        return 0;
     }
 }
