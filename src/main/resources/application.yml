@@ -1,0 +1,11 @@
+spring:
+    application:
+        name: cronjob
+management:
+    endpoints:
+        web:
+            exposure: 
+                include: health
+
+server:
+    port: 8080
