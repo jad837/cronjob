@@ -1,14 +1,19 @@
 package com.blogs.controllers;
 
+import com.blogs.services.ExampleService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
 public class ExampleController {
 
-    @GetMapping(path = "/hello")
-    public String helloWorld() {
-        return "Hello World";
+    @Autowired
+    ExampleService exampleService;
+
+    @PostMapping(path = "/cronjob")
+    public void runCronJob(){
+        exampleService.cronfunction();
     }
     
 }
